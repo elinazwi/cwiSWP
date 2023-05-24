@@ -25,5 +25,13 @@ function supercalculation(a,b){
     return (a+b)/2*a;
 }   
 
-let result2 = supercalculation(2,4)
-console
+let result2 = supercalculation(2,10)
+console.log(result2);
+
+//Aufgabe 4
+function easter(){
+    let J = 2023
+    let N = J-1900;
+    let A = N%19
+    let B = [(7*A)]
+}

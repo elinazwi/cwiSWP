@@ -29,9 +29,21 @@ let result2 = supercalculation(2,10)
 console.log(result2);
 
 //Aufgabe 4
-function easter(){
-    let J = 2023
-    let N = J-1900;
-    let A = N%19
-    let B = [(7*A)]
+function printEasterDate(year) {
+    let N = year - 1900;
+    let A = N % 19;
+    let B = ((7*A+1) / 19);
+    let M = (11*A+4-B) % 29;
+    let Q = Math.floor (N/4);
+    let W = (N+Q+31-M) % 7;
+    let P = Math.floor (25-M-W);
+
+    if (P>0) {
+        console.log('Ostersonntag ist der ', P ,'. April');
+    }
+    else {
+        console.log('Ostersonntag ist der ' ,(P+31), '. März')
+    }
 }
+
+printEasterDate(2023)
